@@ -1,0 +1,401 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600;800&display=swap');
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+body{
+  background: #E6E6E6;
+} 
+:root {
+  --gradient: linear-gradient(to right, #80b980, #486148);
+}
+.sidebar{
+  position: fixed;
+  width: 300px;
+  height: 85vh;
+  background: #E6E6E6;
+  padding: 20px;
+}
+.main-home{
+  position: absolute;
+  width: calc(100% - 300px);
+  min-height: 100vh;
+  top: 0;
+  left: 300px;
+  background: #fff;
+  border-radius: 1rem 0 0 1rem;
+  z-index: 1000;
+}
+.logo img{
+  width: 130px;
+}
+.profile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.4rem;
+}
+.profile-img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #80b980;
+}
+.profile-img img{
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  object-position: center;
+}
+.name{
+  display: flex;
+  align-items: center;
+  margin: 1rem 0 0.4rem;
+}
+.name h1{
+  font-size: 1.1rem;
+}
+.name img{
+  margin-left: 4px;
+  width: 20px;
+  object-fit: contain;
+}
+.profile-img span{
+  font-size: 0.938rem;
+  font-weight: 400;
+}
+.about{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+.box{
+  text-align: center;
+}
+.box h3{
+  font-size: 1rem;
+  font-weight: 500;
+}
+.box span{
+  font-size: 0.938rem;
+  font-weight: 400;
+}
+.menu a{
+  width: 100%;
+  font-size: 1rem;
+  color: #000;
+  display: flex;
+  align-items: center;
+  line-height: 40px;
+
+}
+.menu a:hover,
+.menu .active{
+  color: #80b980
+}
+.menu .icon{
+  margin-right: 1rem;
+  font-size: 20px;
+}
+.menu a:hover::before,
+.menu .active::before{
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 2px;
+  height: 17px;
+  background: #80b980;
+}
+.search {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 5px;
+  width: 300px;
+  height: 50px;
+  border-radius: 50px;
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2),
+    -2px -2px 10px var(--primary-color);
+  margin: 10px;
+  position: relative;
+  transition: width 1.5s;
+}
+
+.magnifier {
+  width: 25px;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  margin: 10px 50px;
+  width: 100%;
+  outline: none;
+  color: var(--text-dark);
+  transition: width 1s;
+  transition-delay: 0.5s;
+}
+
+.active.search-bar-container {
+  width: 50px;
+}
+
+.active .input {
+  width: 0;
+}
+/* Main Home */
+.main-home{
+  padding: 20px;
+  overflow: hidden;
+}
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-content{
+  display: flex;
+  align-items: center;
+}
+.header-content i{
+  color: #000;
+  margin-left: 1rem;
+  font-size: 20px;
+}
+.header-content .btn{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  background: var(--gradient);
+  margin-left: 1rem;
+}
+.header-content.btn i{
+  color: hsla(0, 0%, 100%, 0.6);
+  margin-right: 10px;
+}
+.btn-text{
+  color: white;
+}
+.challenges-title{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.challenges-title h1{
+  font-size: 1.8rem;
+}
+.challenges{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+.challenges-img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 375px;
+  border-radius: 10px;
+  border: 2px solid #80b980;
+  position: relative;
+  text-align: center;
+  color: white;
+  background-color: #ccc;
+  height: 250px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.challenges-img img{
+  width: 370px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 10px;
+  object-position: center;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+}
+.image{
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.challenges-img:hover .image{
+  opacity: 0.3;
+}
+.challenges-img:hover .middle {
+  opacity: 1;
+  cursor: pointer;
+}
+.challenges-img:hover .centered {
+  opacity: 0;
+}
+.text {
+  background-color: #80b980;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+.feed{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.feed h1{
+  font-size: 1.7rem;
+}
+.main-posts{
+  padding-top: 50px;
+  display: flex;
+  grid-template-columns: repeat(auto-fit,minmax(300px, auto));
+  gap: 11px;
+  justify-content: center;
+  align-items: center;
+}
+.post-box{
+  width: 600px;
+}
+.post-box img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+.post-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  display: none;
+}
+.post-img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #80b980;
+  border-radius: 50%;
+}
+.post-img img{
+  width: 27px;
+  height: 27px;
+  object-fit: cover;
+  border-radius: 50%;
+  object-position: center;
+}
+.post-profile{
+  display: flex;
+  align-items: center;
+}
+.post-profile h3{
+  font-size: 12px;
+  font-weight: 600px;
+  margin-left: 5px;
+}
+.likes{
+  display: flex;
+  align-items: center;
+}
+.likes i{
+  font-size: 20px;
+  margin-left: 10px;
+}
+.likes span{
+  font-size: 14px;
+  margin-left: 7px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .sidebar {
+    width: 100%;
+    position: static;
+  }
+
+  .main-home {
+    width: 100%;
+    position: static;
+    left: 0;
+    border-radius: 0;
+  }
+
+  .search-bar-container {
+    width: 100%;
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  .header-content .btn {
+    margin-left: 0;
+  }
+
+  .challenges {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .challenges-img {
+    width: 90%;
+    text-align: left;
+  }
+
+  .challenges-img img {
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .middle,
+  .centered {
+    display: none;
+  }
+
+  .feed h1 {
+    font-size: 1.5rem;
+  }
+
+  .main-posts {
+    grid-template-columns: 1fr;
+  }
+
+  .post-box {
+    width: 100%;
+  }
+
+  
+}
+

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>България през обектив</title>
+    <link rel="stylesheet" href="profileStyle.css" />
+    <!-- Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- Map -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <a href="#" class="logo">
+        <img src="../Resources/logo.png" />
+      </a>
+
+      <!-- Profile Image -->
+      <div class="profile">
+        <div class="profile-img">
+          <img src="../Resources/profileImg.jpg" />
+        </div>
+        <div class="name">
+          <h1>Потребител</h1>
+        </div>
+        <span>@user</span>
+      </div>
+      <!-- Menu -->
+      <div class="menu">
+        <a href="profileIndex.html">
+          <span class="icon">
+            <i class="ri-function-line"></i>
+          </span>
+          Начало
+          <a href="../Map Page/map.html">
+            <span class="icon">
+              <i class="ri-search-2-line"></i>
+            </span>
+            Карта на България
+          </a>
+          <a href="../Map Page/map.html">
+            <span class="icon">
+              <i class="ri-logout-box-line"></i>
+            </span>
+            Моята карта
+          </a>
+        </a>
+      </div>
+    </div>
+    <!-- Main Home -->
+    <div class="main-home">
+      <!-- Header -->
+      <div class="header">
+        <!-- Search -->
+        <div class="search">
+          <img
+            src="https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/magnifier-512.png"
+            alt="magnifier"
+            class="magnifier"
+          />
+          <input type="text" class="input" placeholder="Търси..." />
+        </div>
+        <!-- Content -->
+        <div class="header-content">
+          <!-- Button -->
+          <a href="../Camera Page/cameraIndex.html" class="btn">
+            <i class="ri-add-box-fill"></i>
+            <div class="btn-text">Камера</div>
+          </a>
+        </div>
+      </div>
+      <!-- Challenges -->
+      <div class="challenges-title">
+        <h1>Предизвикателства</h1>
+      </div>
+      <!-- Challenges Content -->
+      <div class="challenges">
+        <div class="challenges-img color">
+          <div class="centered">Дневно</div>
+          <div class="middle">
+            <a href="../map challenge/dailyIndex.html"
+              ><div class="text">Виж на картата</div></a>
+          </div>
+        </div>
+        <div class="challenges-img color">
+          <div class="centered">Седмично</div>
+          <div class="middle">
+            <a href="../map challenge/weeklyIndex.html"
+              ><div class="text">Виж на картата</div></a
+            >
+          </div>
+        </div>
+        <div class="challenges-img color">
+          <div class="centered">Месечно</div>
+          <div class="middle">
+            <a href="../map challenge/monthlyIndex.html"
+              ><div class="text">Виж на картата</div></a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Main Posts -->
+      <h2>Постове</h2>
+      <div class="main-posts">
+        <!-- Box 1 -->
+        <div class="post-box">
+            <div id="postedPhotosContainer">
+                <img id="capturedPhoto" src="" alt="">
+            </div>
+            <div class="post-info">
+                <div class="post-profile">
+                    <div class="post-img">
+                        <img src="../Resources/profileImg.jpg" alt="">
+                    </div>
+                    <h3>user</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+    var photos = sessionStorage.getItem("capturedPhoto");
+    if (photos) {
+        var photoArray = photos.split("|");
+        var container = document.getElementById("postedPhotosContainer");
+        photoArray.forEach(function (photoUrl) {
+            if (photoUrl !== '') {
+                var newImg = document.createElement("img");
+                newImg.src = photoUrl;
+                container.appendChild(newImg);
+
+                document.querySelector('.post-info').style.display = 'block';
+            }
+        });
+    }
+});
+    </script>
+  </body>
+</html>

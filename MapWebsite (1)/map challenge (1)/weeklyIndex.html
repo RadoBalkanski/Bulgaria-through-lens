@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge</title>
+    <!-- leaflet css  -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="mapch.css" />
+    <!-- Link to Icons-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <a href="../Profile Page/profileIndex.html" class="logo">
+        <img src="../Resources/logo.png" />
+      </a>
+
+      <!-- Profile Image -->
+      <div class="profile">
+        <div class="profile-img">
+          <img src="../Resources/profileImg.jpg" />
+        </div>
+        <div class="name">
+          <h1>Потребител</h1>
+        </div>
+        <span>@user</span>
+      </div>
+      <!-- Menu -->
+      <div class="menu">
+        <a href="../Profile Page/profileIndex.html">
+          <span class="icon">
+            <i class="ri-function-line"></i>
+          </span>
+          Начало
+          <a href="#">
+            <span class="icon">
+              <i class="ri-search-2-line"></i>
+            </span>
+            Карта на България
+          </a>
+          <a href="#">
+            <span class="icon">
+              <i class="ri-logout-box-line"></i>
+            </span>
+            Моята карта
+          </a>
+          <a href="#" id="myButton">
+            <span class="icon">
+              <i class="ri-send-plane-2-line"></i>
+            </span>
+            Камера
+          </a>
+        </a>
+      </div>
+    </div>
+    <div class="main-home">
+      <div id="map">
+        <div class="leaflet-control coordinate"></div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- leaflet js  -->
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""
+></script>
+<script src="./data/point.js"></script>
+<script src="./data/line.js"></script>
+<script src="./data/polygon.js"></script>
+<script src="weekly.js"></script>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="cameraStyle.css">
+    <title>Камера</title>
+</head>
+<body>
+    <div class="camera-container">
+        <video id="video">Video stream not available.</video>
+        <button id="startbutton" class="capture-button">Снимай</button>
+        <img id="photo" alt="The screen capture will appear in this box." style="display: none;">
+        <button id="downloadbutton" class="download-button" style="display: none;">Запази</button>
+        <button id="retakebutton" class="capture-button" style="display: none;">Отново</button>
+        <button id="postToFeedButton" class="capture-button" style="display: none;"><a href="../Profile Page/profileIndex.html" id="postButton" class="btn">Post Photo</a></button>
+    </div>
+    <canvas id="canvas" style="display: none;"></canvas>
+    <script src="cameraScript.js"></script>
+</body>
+</html>
